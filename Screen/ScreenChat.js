@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, TextInput, FlatList } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, TextInput, FlatList, Pressable } from 'react-native';
 import moment from 'moment';
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -199,7 +199,12 @@ export default function ScreenChat() {
       {/* Message Stats */}
       <View style={styles.messageStats}>
         <Text style={styles.messageTitle}>Tin nhắn </Text>
+        <Pressable onPress={()=>{
+            navigation.navigate("ScreenChatwait");
+        }}>
         <Text style={styles.tinnhandangcho}>Tin nhắn đang chờ</Text>
+        </Pressable>
+       
       </View>
 
       <View style={styles.messagesContainer}>

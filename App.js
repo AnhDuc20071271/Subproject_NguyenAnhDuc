@@ -9,7 +9,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ScreenTimKiem from './Screen/ScreenTimKiem';
 import ScreenProfile from './Screen/ScreenProfile';
-
+import ScreenChatwait from './Screen/ScreenChatwait';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -25,6 +25,7 @@ export default function App() {
         <Stack.Screen name="ScreenGiaoDienChat" component={ScreenGiaoDienChat}/>
         <Stack.Screen name="ScreenTimKiem" component={ScreenTimKiem}/>
         <Stack.Screen name="ScreenProfile" component={ScreenProfile}/>
+        <Stack.Screen name="ScreenChatwait" component={ScreenChatwait}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
